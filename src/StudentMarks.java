@@ -5,6 +5,8 @@
  * @author (your name)
  * @version (a version number or a date)
  */
+import java.io.*;
+import java.util.*;
 public class StudentMarks
 {
     static class Student {
@@ -27,4 +29,5 @@ public class StudentMarks
             return lastName + " " + firstName + " (ID: " + studentId + ") - A1: " + marks[0] + ", A2: " + marks[1] + ", A3: " + marks[2] + ", Total: " + totalMarks;
         }
     }
+    public static void main(String[] args) {}
 }
