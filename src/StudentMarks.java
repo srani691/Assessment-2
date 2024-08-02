@@ -22,5 +22,9 @@ public class StudentMarks
             this.marks[2] = a3;
             this.totalMarks = a1 + a2 + a3;
         }
+        @Override
+        public String toString() {
+            return lastName + " " + firstName + " (ID: " + studentId + ") - A1: " + marks[0] + ", A2: " + marks[1] + ", A3: " + marks[2] + ", Total: " + totalMarks;
+        }
     }
 }
