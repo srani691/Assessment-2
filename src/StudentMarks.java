@@ -43,4 +43,12 @@ public class StudentMarks
             return;
         }
     }
+    private static List<Student> readDataFromFile(String filename) throws IOException {
+         List<Student> students = new ArrayList<>();
+         BufferedReader reader = new BufferedReader(new FileReader(filename));
+        String line;
+        reader.readLine(); // skip the first line (Unit)
+        reader.readLine(); // skip the second line (header)
+        return students;
+    }
 }
