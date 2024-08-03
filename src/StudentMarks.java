@@ -48,6 +48,15 @@ public class StudentMarks
             System.out.println("Error reading the file: " + e.getMessage());
             return;
         }
+        while (true) {
+            System.out.println("\nMenu:");
+            System.out.println("1. Print all students marks");
+            System.out.println("2. Print students below a threshold");
+            System.out.println("3. Print top and bottom 5 students");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+            int choice = input.nextInt();
+        }
     }
     private static List<Student> readDataFromFile(String filename) throws IOException {
          List<Student> students = new ArrayList<>();
