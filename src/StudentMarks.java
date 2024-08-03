@@ -42,6 +42,12 @@ public class StudentMarks
             System.out.println("File not found: " + file.getAbsolutePath());
             return;
         }
+        try {
+            students = readDataFromFile(filename);
+        } catch (IOException e) {
+            System.out.println("Error reading the file: " + e.getMessage());
+            return;
+        }
     }
     private static List<Student> readDataFromFile(String filename) throws IOException {
          List<Student> students = new ArrayList<>();
