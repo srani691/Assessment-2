@@ -36,6 +36,11 @@ public class StudentMarks
 
         // Debugging: Print the current working directory
         System.out.println("Current working directory: " + new File(".").getAbsolutePath());
-        
+        // Check if the file exists
+        File file = new File(filename);
+        if (!file.exists()) {
+            System.out.println("File not found: " + file.getAbsolutePath());
+            return;
+        }
     }
 }
