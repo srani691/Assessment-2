@@ -49,6 +49,20 @@ public class StudentMarks
         String line;
         reader.readLine(); // skip the first line (Unit)
         reader.readLine(); // skip the second line (header)
+         while ((line = reader.readLine()) != null) {
+            if (line.startsWith("#")) continue; // skip comments
+            String[] data = line.split(",");
+            if (data.length >= 6) {
+                String lastName = data[0].trim();
+                String firstName = data[1].trim();
+                String studentId = data[2].trim();
+                double a1 = data[3].trim().isEmpty() ? 0 : Double.parseDouble(data[3].trim());
+                double a2 = data[4].trim().isEmpty() ? 0 : Double.parseDouble(data[4].trim());
+                double a3 = data[5].trim().isEmpty() ? 0 : Double.parseDouble(data[5].trim());
+                students.add(new Student(lastName, firstName, studentId, a1, a2, a3));
+            }
+        }
+        reader.close();
         return students;
     }
 }
