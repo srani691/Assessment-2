@@ -29,5 +29,13 @@ public class StudentMarks
             return lastName + " " + firstName + " (ID: " + studentId + ") - A1: " + marks[0] + ", A2: " + marks[1] + ", A3: " + marks[2] + ", Total: " + totalMarks;
         }
     }
-    public static void main(String[] args) {}
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        List<Student> students = new ArrayList<>();
+        String filename = "../data/prog5001_students_grade_2022.csv";
+
+        // Debugging: Print the current working directory
+        System.out.println("Current working directory: " + new File(".").getAbsolutePath());
+        
+    }
 }
