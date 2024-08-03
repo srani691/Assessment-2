@@ -56,6 +56,24 @@ public class StudentMarks
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
             int choice = input.nextInt();
+             switch (choice) {
+                case 1:
+                    System.out.print("Details of all students");
+                    break;
+                case 2:
+                    System.out.print("Enter threshold mark: ");
+                    double threshold = input.nextDouble();
+                   System.out.print("Threshold mark is :"+threshold);
+                    break;
+                case 3:
+                     System.out.print("Print top 5 and bottom 5 students");
+                    break;
+                case 4:
+                    System.out.println("Exiting...... ");
+                    return;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
         }
     }
     private static List<Student> readDataFromFile(String filename) throws IOException {
