@@ -103,4 +103,11 @@ public class StudentMarks
             System.out.println(student);
         }
     }
+    private static void printStudentsBelowThreshold(List<Student> students, double threshold) {
+        for (Student student : students) {
+            if (student.totalMarks < threshold) {
+                System.out.println(student);
+            }
+        }
+    }
 }
