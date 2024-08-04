@@ -63,7 +63,7 @@ public class StudentMarks
                 case 2:
                     System.out.print("Enter threshold mark: ");
                     double threshold = input.nextDouble();
-                   System.out.print("Threshold mark is :"+threshold);
+                    printStudentsBelowThreshold(students, threshold);
                     break;
                 case 3:
                      System.out.print("Print top 5 and bottom 5 students");
