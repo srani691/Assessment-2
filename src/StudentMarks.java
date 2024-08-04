@@ -98,4 +98,9 @@ public class StudentMarks
         reader.close();
         return students;
     }
+    private static void printAllStudents(List<Student> students) {
+        for (Student student : students) {
+            System.out.println(student);
+        }
+    }
 }
