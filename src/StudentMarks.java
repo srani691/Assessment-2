@@ -66,7 +66,8 @@ public class StudentMarks
                     printStudentsBelowThreshold(students, threshold);
                     break;
                 case 3:
-                     System.out.print("Print top 5 and bottom 5 students");
+                    sortStudentsByTotalMarks(students);
+                    System.out.print("Print top 5 and bottom 5 students");
                     break;
                 case 4:
                     System.out.println("Exiting...... ");
@@ -110,4 +111,14 @@ public class StudentMarks
             }
         }
     }
+     private static void sortStudentsByTotalMarks(List<Student> students) {
+        for (int i = 0; i < students.size() - 1; i++) {
+            int maxIdx = i;
+            for (int j = i + 1; j < students.size(); j++) {
+                if (students.get(j).totalMarks > students.get(maxIdx).totalMarks) {
+                    maxIdx = j;
+                }
+            }
+        }
+        }
 }
