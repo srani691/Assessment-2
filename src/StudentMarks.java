@@ -58,7 +58,7 @@ public class StudentMarks
             int choice = input.nextInt();
              switch (choice) {
                 case 1:
-                    System.out.print("Details of all students");
+                    printAllStudents(students);
                     break;
                 case 2:
                     System.out.print("Enter threshold mark: ");
