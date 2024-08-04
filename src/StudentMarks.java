@@ -119,6 +119,10 @@ public class StudentMarks
                     maxIdx = j;
                 }
             }
+            // Swap using a temporary variable
+            Student temp = students.get(i);
+            students.set(i, students.get(maxIdx));
+            students.set(maxIdx, temp);
         }
         }
 }
